@@ -37,7 +37,7 @@ public class App {
             System.out.println("App.main()");
         }
 
-        Path zipFile = Paths.get("c://test//zip.zip");
+        Path zipFile = Paths.get("c://test//zippp.zip");
         Path fileToArc = Paths.get("c://test//t3.txt");
 
         try (ZipOutputStream zip = new ZipOutputStream(new FileOutputStream(zipFile.toFile(), false));) {
@@ -46,19 +46,5 @@ public class App {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-    /*     FileOutputStream zipFile = new FileOutputStream("c:/test/archive.zip");
-        ZipOutputStream zip = new ZipOutputStream(zipFile);
-
-        // кладем в него ZipEntry – «архивный объект»
-        zip.putNextEntry(new ZipEntry("document.txt"));
-
-        // копируем файл «document-for-archive.txt» в архив под именем «document.txt»
-        File file = new File("c:/test/t3.txt");
-        Files.copy(file.toPath(), zip);
-
-        // закрываем архив
-        zip.close(); */
-
     }
 }
