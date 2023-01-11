@@ -17,7 +17,6 @@ public class App {
      * @param args
      */
     public static void main(String[] args) throws Exception {
-
         
         Path p = Paths.get("c://test//t1.txt");
 
