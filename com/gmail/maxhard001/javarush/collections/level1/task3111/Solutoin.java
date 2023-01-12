@@ -37,7 +37,7 @@ public class Solutoin {
         SearchFileVisitor searchFileVisitor = new SearchFileVisitor();
 
         // Поисковых параметров 4 - задаем сеттерами, но могут быть null (не установлен)
-        searchFileVisitor.setPartOfName("amigo");
+        // searchFileVisitor.setPartOfName("amigo");
         searchFileVisitor.setPartOfContent("programmer");
         searchFileVisitor.setMinSize(5);
         searchFileVisitor.setMaxSize(10000);
