@@ -37,8 +37,7 @@ public class Solution {
         public void run() {
             
             try {
-                Registry ServerRegestry = LocateRegistry.getRegistry(2099);
-                var printTwice = (DoubleString) ServerRegestry.lookup(UNIC_BINDING_NAME);
+                DoubleString printTwice = (DoubleString) registry.lookup(UNIC_BINDING_NAME);
                 System.out.println(printTwice.doubleString("Amigo son of a bitch! "));
                         
             } catch (RemoteException | NotBoundException e) {
