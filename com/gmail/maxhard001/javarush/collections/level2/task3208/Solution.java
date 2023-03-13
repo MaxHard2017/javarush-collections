@@ -53,15 +53,18 @@ public class Solution {
     public static Thread SERVER_THREAD = new Thread(new Runnable() {
         @Override
         public void run() {
-            final Cat cat = new Cat("Barcelona");
-            final Dog dog = new Dog("Рычал-су");
+            Remote stub = null;
+            final Remote serviceCat = new Cat("Barcelona");
+            final Animal serviceDog = new Dog("Рычал-су");
 
            try {
                 registry = LocateRegistry.createRegistry(2099);
-                Remote remoteCat = UnicastRemoteObject.exportObject(cat, 0);
-                registry.bind("server.cat", remoteCat);
-                Remote remoteDog = UnicastRemoteObject.exportObject(dog, 0);
-                registry.bind("server.dog", remoteDog);
+
+                stub = UnicastRemoteObject.exportObject(serviceCat, 0);
+                registry.bind("server.cat", stub);
+
+                stub = UnicastRemoteObject.exportObject(serviceDog, 0);
+                registry.bind("server.dog", stub);
     
             } catch (RemoteException e) {
                 e.printStackTrace();
