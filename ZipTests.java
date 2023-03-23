@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-public class App {
+public class ZipTests {
     /**
      * @throws Exception
      * @param args
